@@ -4,10 +4,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "demo.onlineorder.dev-logix.com",
+        hostname: "onlineorderapp.the-lms.com/",
         port: "",
       },
     ],
+  },
+  // Add the following line for static HTML export with App Router
+  output: {
+    export: true,
   },
 };
 

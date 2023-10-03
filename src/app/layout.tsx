@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Admin Panel",
-  description: "Admin Panel by Cross Dev Logix",
+  description: "Admin Panel by DevLogix",
 };
 
 export default function RootLayout({
