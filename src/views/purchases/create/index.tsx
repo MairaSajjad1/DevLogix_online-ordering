@@ -139,8 +139,8 @@ const Create = () => {
           quantity: "",
         },
       ],
-      business_id: 5,
-      created_by: 4,
+      business_id: session?.user?.business_id,
+      created_by: session?.user?.customer_id,
     },
   });
 
