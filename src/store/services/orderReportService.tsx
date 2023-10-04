@@ -18,7 +18,7 @@ const orderReportService = createApi({
   endpoints: (builder) => ({
     getOrderReport: builder.query({
       query: ({ buisnessId, customerId, perPage }) => ({ 
-        url: `/order/report?business_id=5&customer_id=31&per_page=-1`,
+        url: `/order/report?business_id=${buisnessId}&customer_id=${customerId}&per_page=${perPage}`,
         method: "GET",
       }),
       transformResponse: ({ data }: { data: Order[] }) =>
