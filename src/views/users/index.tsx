@@ -31,6 +31,8 @@ export interface User {
 
 const Users: FC = () => {
   const { data: session } = useSession();
+
+  console.log(session?.user)
   // GET
   const {
     data: usersList,

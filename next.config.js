@@ -3,8 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+      
         protocol: "https",
-        hostname: "onlineorderapp.the-lms.com/",
+        hostname: "onlineorderapp.the-lms.com",
         port: "",
       },
     ],

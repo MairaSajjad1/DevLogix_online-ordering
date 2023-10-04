@@ -4,8 +4,8 @@ const authService = createApi({
   reducerPath: "auth",
   baseQuery: fetchBaseQuery({
     baseUrl:
-      process.env.NEXT_PUBLIC_API_BASE_URL ||
-      "https://onlineorderapp.the-lms.com/",
+      process.env.NEXT_PUBLIC_API_BASE_URL
+   ,
   }),
   endpoints: (builder) => ({
     login: builder.mutation({

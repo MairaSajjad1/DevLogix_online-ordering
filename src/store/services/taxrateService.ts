@@ -7,8 +7,8 @@ const taxrateService = createApi({
   tagTypes: ["taxrate"],
   baseQuery: fetchBaseQuery({
     baseUrl:
-      process.env.NEXT_PUBLIC_API_BASE_URL ||
-      "https://onlineorderapp.the-lms.com/",
+      process.env.NEXT_PUBLIC_API_BASE_URL
+   ,
 
     prepareHeaders: async (headers, { getState }) => {
       headers.set("Accept", "application/json");

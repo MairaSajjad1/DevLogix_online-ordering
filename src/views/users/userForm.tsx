@@ -34,6 +34,8 @@ interface UserFormProps {
 const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
   const { data: session } = useSession();
 
+  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,6 +50,7 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
   // console.log(form.watch())
   function onSubmit(values: z.infer<typeof formSchema>) {
     // console.log("suv")
+    // console.log("API Request Body:", values);
     data
       ? toast.error("Update API is not Implemented Yet")
       : create({ data: values });
@@ -62,11 +65,16 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
 
   useEffect(() => {
     if (createError) {
+      console.log("API Status:", createResponse.status);
       toast.error("Something Went Wrong.");
+     
+    
     }
     if (createSuccess) {
       toast.success(data ? "User Updated Successfully." : "User Added Successfully.");
       setOpen();
+        // console.log("API Response:", createResponse);
+      // console.log("API Status:", createResponse.status);
     }
   }, [createError, createSuccess]);
 
