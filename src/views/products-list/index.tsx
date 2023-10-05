@@ -250,7 +250,7 @@ const ProductsList: FC = () => {
 
   const handleEdit = (data: Product | null) => {
     setSelectedProductList(data);
-    router.push('/products/products-list/create');
+    router.push('/products/products-list/create?productId=${product_id}');
   };
 
   const handleDelete = (data: Product | null) => {

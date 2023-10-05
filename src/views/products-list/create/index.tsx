@@ -317,7 +317,7 @@ const CreateProduct = () => {
     form.setValue("product_images", files);
   };
 
-  console.log( form.watch())
+  // console.log( form.watch())
 
   const loadingData = Array.from({ length: 10 }, (_, index) => index + 1);
   return (
@@ -386,7 +386,6 @@ const CreateProduct = () => {
                 <FormLabel>Description</FormLabel>
                 <FormControl>
                   <Textarea
-                    // placeholder="This is the description of the product."
                     {...field}
                   />
                 </FormControl>
@@ -789,12 +788,6 @@ const CreateProduct = () => {
           )}
 
           <div className="col-span-3 flex items-center justify-center">
-            {/* <Button disabled={createLoading} type="submit" className="w-full">
-              {createLoading && (
-                <Loader className="mr-2 h-4 w-4 animate-spin" />
-              )}
-              Add
-            </Button> */}
             <Button
                 disabled={createLoading || updateLoading}
                 className="w-full"
