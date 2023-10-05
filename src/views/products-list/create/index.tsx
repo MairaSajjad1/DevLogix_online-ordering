@@ -335,7 +335,7 @@ const CreateProduct = () => {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Pizza" {...field} />
+                  <Input  {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -348,7 +348,7 @@ const CreateProduct = () => {
               <FormItem>
                 <FormLabel>SKU</FormLabel>
                 <FormControl>
-                  <Input placeholder="P324" {...field} />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -363,7 +363,9 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Single" />
+                      <SelectValue
+                      //  placeholder="Single"
+                        />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -384,7 +386,7 @@ const CreateProduct = () => {
                 <FormLabel>Description</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="This is the description of the product."
+                    // placeholder="This is the description of the product."
                     {...field}
                   />
                 </FormControl>
@@ -401,7 +403,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Lahore" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -438,7 +440,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Food" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -475,7 +477,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Food" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -509,7 +511,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Food" />
+                      <SelectValue />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -544,7 +546,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="GST" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -579,7 +581,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="kg" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -611,7 +613,7 @@ const CreateProduct = () => {
               <FormItem>
                 <FormLabel>Weight</FormLabel>
                 <FormControl>
-                  <Input placeholder="4" {...field} type="number" />
+                  <Input {...field} type="number" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -627,7 +629,7 @@ const CreateProduct = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Inclusive" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -648,7 +650,7 @@ const CreateProduct = () => {
                   <FormItem>
                     <FormLabel>Price Inclusive Tax</FormLabel>
                     <FormControl>
-                      <Input placeholder="468" {...field} type="number" />
+                      <Input {...field} type="number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -661,7 +663,7 @@ const CreateProduct = () => {
                   <FormItem>
                     <FormLabel>Price Exclusive Tax</FormLabel>
                     <FormControl>
-                      <Input placeholder="400" {...field} type="number" />
+                      <Input  {...field} type="number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -674,7 +676,7 @@ const CreateProduct = () => {
                   <FormItem>
                     <FormLabel>Profit Margin</FormLabel>
                     <FormControl>
-                      <Input placeholder="199" {...field} type="number" />
+                      <Input {...field} type="number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -687,7 +689,7 @@ const CreateProduct = () => {
                   <FormItem>
                     <FormLabel>Selling Price</FormLabel>
                     <FormControl>
-                      <Input placeholder="400" {...field} type="number" />
+                      <Input  {...field} type="number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -700,7 +702,7 @@ const CreateProduct = () => {
                   <FormItem>
                     <FormLabel>Selling Price Inc Tax</FormLabel>
                     <FormControl>
-                      <Input placeholder="468" {...field} type="number" />
+                      <Input  {...field} type="number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -719,7 +721,7 @@ const CreateProduct = () => {
                     <Select onValueChange={field.onChange}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="size" />
+                          <SelectValue />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent className="max-h-60">
@@ -778,7 +780,7 @@ const CreateProduct = () => {
                 <FormItem>
                   <FormLabel>Quantity</FormLabel>
                   <FormControl>
-                    <Input placeholder="320" {...field} type="number" />
+                    <Input  {...field} type="number" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
