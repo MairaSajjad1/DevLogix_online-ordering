@@ -135,7 +135,6 @@ const TypeOfService: FC = () => {
     setSelectedTypeOfService(data);
     toggleModal();
   };
-
   const handleDelete = (data: TypeOfService | null) => {
     setSelectedTypeOfService(data);
     toggleDeleteModal();
