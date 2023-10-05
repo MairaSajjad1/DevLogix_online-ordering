@@ -75,7 +75,7 @@ const BarcodeForm: FC<BarcodeFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Bar Code One" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

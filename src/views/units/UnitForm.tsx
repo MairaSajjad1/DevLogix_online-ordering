@@ -77,7 +77,7 @@ const UnitForm: FC<UnitFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Meter" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -90,7 +90,7 @@ const UnitForm: FC<UnitFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Short Name</FormLabel>
               <FormControl>
-                <Input placeholder="m" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,7 +103,7 @@ const UnitForm: FC<UnitFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Decimal Allowed</FormLabel>
               <FormControl>
-                <Input placeholder="1" type="number" {...field} />
+                <Input type="number" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

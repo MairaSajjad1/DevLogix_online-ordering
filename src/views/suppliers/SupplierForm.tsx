@@ -77,7 +77,7 @@ const SupplierForm: FC<SupplierFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Ali" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -90,7 +90,7 @@ const SupplierForm: FC<SupplierFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Mobile</FormLabel>
               <FormControl>
-                <Input placeholder="923411415567" {...field} type="number" />
+                <Input  {...field} type="number" />
               </FormControl>
               <FormMessage />
             </FormItem>

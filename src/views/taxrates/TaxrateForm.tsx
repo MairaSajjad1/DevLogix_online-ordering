@@ -77,7 +77,7 @@ const TaxrateForm: FC<TaxrateFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="GST" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -90,7 +90,7 @@ const TaxrateForm: FC<TaxrateFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Tax Rate %</FormLabel>
               <FormControl>
-                <Input placeholder="10" {...field} type="number" />
+                <Input  {...field} type="number" />
               </FormControl>
               <FormMessage />
             </FormItem>

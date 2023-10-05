@@ -73,7 +73,7 @@ const RoleForm: FC<RoleFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Customer" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

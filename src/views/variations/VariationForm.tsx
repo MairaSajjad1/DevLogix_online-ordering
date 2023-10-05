@@ -95,7 +95,7 @@ const VariationForm: FC<VariationFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Pizza Variation" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -114,7 +114,7 @@ const VariationForm: FC<VariationFormProps> = ({ setOpen, data }) => {
                     <FormItem>
                       <FormLabel></FormLabel>
                       <FormControl>
-                        <Input placeholder="Large" {...field} />
+                        <Input  {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

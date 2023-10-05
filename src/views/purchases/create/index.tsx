@@ -218,7 +218,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Ali" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -255,7 +255,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Lahore" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -292,7 +292,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="GST" />
+                      <SelectValue />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -324,7 +324,7 @@ const Create = () => {
               <FormItem>
                 <FormLabel>Tax Amount</FormLabel>
                 <FormControl>
-                  <Input placeholder="68" {...field} type="number" />
+                  <Input  {...field} type="number" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -339,7 +339,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Fixed" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -366,7 +366,7 @@ const Create = () => {
                       "Discount Percentage"}
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="30" {...field} type="number" />
+                  <Input  {...field} type="number" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -381,7 +381,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Open Stock" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -404,7 +404,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Pending" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -425,7 +425,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Pending" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -446,7 +446,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Web" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">
@@ -467,7 +467,7 @@ const Create = () => {
                 <Select onValueChange={field.onChange}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Cash" />
+                      <SelectValue  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-60">

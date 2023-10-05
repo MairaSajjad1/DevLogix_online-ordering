@@ -81,7 +81,7 @@ const LocationForm: FC<LocationFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Resturant" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,7 +94,7 @@ const LocationForm: FC<LocationFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Landmark</FormLabel>
               <FormControl>
-                <Input placeholder="Gulberg" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -107,7 +107,7 @@ const LocationForm: FC<LocationFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>City</FormLabel>
               <FormControl>
-                <Input placeholder="Lahore" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -120,7 +120,7 @@ const LocationForm: FC<LocationFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>State</FormLabel>
               <FormControl>
-                <Input placeholder="Punjab" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -134,7 +134,7 @@ const LocationForm: FC<LocationFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Country</FormLabel>
               <FormControl>
-                <Input placeholder="Pakistan" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

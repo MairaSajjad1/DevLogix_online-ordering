@@ -75,7 +75,7 @@ const BrandForm: FC<BrandFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Levis" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

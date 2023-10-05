@@ -65,7 +65,7 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
 
   useEffect(() => {
     if (createError) {
-      console.log("API Status:", createResponse.status);
+      // console.log("API Status:", createResponse.status);
       toast.error("Something Went Wrong.");
      
     
@@ -74,7 +74,6 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
       toast.success(data ? "User Updated Successfully." : "User Added Successfully.");
       setOpen();
         // console.log("API Response:", createResponse);
-      // console.log("API Status:", createResponse.status);
     }
   }, [createError, createSuccess]);
 
@@ -88,7 +87,7 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Maira" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -101,7 +100,7 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="maira@example.com" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -114,7 +113,7 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Mobile Number</FormLabel>
               <FormControl>
-                <Input placeholder="923012456678" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -127,7 +126,7 @@ const UserForm: FC<UserFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="password" type="password" {...field} />
+                <Input  type="password" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

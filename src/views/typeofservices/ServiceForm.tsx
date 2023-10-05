@@ -99,7 +99,7 @@ const ServiceForm: FC<ServiceFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Dine In" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -113,7 +113,6 @@ const ServiceForm: FC<ServiceFormProps> = ({ setOpen, data }) => {
               <FormLabel>Description</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="This service type is for the Dine in."
                   {...field}
                 />
               </FormControl>
@@ -128,7 +127,7 @@ const ServiceForm: FC<ServiceFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Charge Type</FormLabel>
               <FormControl>
-                <Input placeholder="Fixed" disabled {...field} />
+                <Input  disabled {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -141,7 +140,7 @@ const ServiceForm: FC<ServiceFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Charges</FormLabel>
               <FormControl>
-                <Input placeholder="10" {...field} type="number" />
+                <Input  {...field} type="number" />
               </FormControl>
               <FormMessage />
             </FormItem>

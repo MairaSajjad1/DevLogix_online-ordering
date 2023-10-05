@@ -93,7 +93,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Restaurant" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -106,7 +106,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Address</FormLabel>
               <FormControl>
-                <Input placeholder="Gulberg" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -119,7 +119,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>City</FormLabel>
               <FormControl>
-                <Input placeholder="Lahore" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -132,7 +132,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>State</FormLabel>
               <FormControl>
-                <Input placeholder="Punjab" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -146,7 +146,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Country</FormLabel>
               <FormControl>
-                <Input placeholder="Pakistan" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -159,7 +159,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Landmark</FormLabel>
               <FormControl>
-                <Input placeholder="Pakistan" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -172,7 +172,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Owner's Name</FormLabel>
               <FormControl>
-                <Input placeholder="Owner's Name" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -185,7 +185,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="Owner's UserName" {...field} />
+                <Input  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -198,7 +198,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="password" {...field} type="password" />
+                <Input  {...field} type="password" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -225,7 +225,7 @@ const Create = () => {
             <FormItem>
               <FormLabel>Mobile No</FormLabel>
               <FormControl>
-                <Input placeholder="923411415567" {...field} type="number" />
+                <Input  {...field} type="number" />
               </FormControl>
               <FormMessage />
             </FormItem>

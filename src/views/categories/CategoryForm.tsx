@@ -75,7 +75,7 @@ const CategoryForm: FC<CategoryFormProps> = ({ setOpen, data }) => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Pizza" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
