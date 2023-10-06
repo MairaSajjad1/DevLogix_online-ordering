@@ -46,6 +46,7 @@ import { Brand } from "@/views/brands";
 import { useGetBarcodesQuery } from "@/store/services/barCodeService";
 import { Barcode } from "@/views/bar-codes";
 
+
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
   description: z.string().min(1, { message: "Description is required." }),
