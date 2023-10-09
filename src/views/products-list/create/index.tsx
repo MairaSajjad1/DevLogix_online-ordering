@@ -12,7 +12,7 @@ import { BiLoaderAlt as Loader } from "react-icons/bi";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useFieldArray, useForm } from "react-hook-form";
 import { useSession } from "next-auth/react";
-import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { Input } from "@/components/ui/input";
 import { useGetUnitsQuery } from "@/store/services/unitService";
 import { useGetTaxratesQuery } from "@/store/services/taxrateService";
@@ -25,6 +25,7 @@ import {
   SelectItem,
   SelectValue,
 } from "@/components/ui/select";
+import { useRouter } from "next/navigation";
 import { Unit } from "@/views/units";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
@@ -98,19 +99,24 @@ const formSchema = z.object({
 const CreateProduct = () => {
   const { data: session } = useSession();
 
-  const router = useRouter();
-  const { query } = router;
-  const productId = query.id;
-  console.log(productId);
-
-  useEffect(() => {
-    // Extract the product ID from router.query
-    if (productId) {
-      console.log("Product ID:", productId);
-      // Fetch the product data for editing here if needed
-    }
-  }, [productId]);
+  const {get} = useSearchParams();
+  const productId=get("id");
+  console.log({productId})
   
+  const router = useRouter();
+  const { data: specificProductData } = useGetSpecificProductsQuery(
+    { productId}
+  );
+  useEffect(() => {
+    if (specificProductData) {
+      // const product = specificProductData; 
+        const product = specificProductData[0];
+      form.setValue("name", product.name);
+      form.setValue("sku", product.sku);
+      form.setValue("type", product.type);
+      // ... set other form values based on the product data
+    }
+  }, [specificProductData]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -245,7 +251,7 @@ const CreateProduct = () => {
 
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const isEditing = productId !== undefined;
+    const isEditing = true !== undefined;
     const formdata = new FormData();
     formdata.append("name", values.name);
     formdata.append("description", values.description);
@@ -329,7 +335,7 @@ const CreateProduct = () => {
     // create({ data: formdata });
 
     if (isEditing) {
-      update({ id: productId, data: formdata });
+      update({ id: true, data: formdata });
     } else {
       create({ data: formdata });
     }
@@ -346,7 +352,7 @@ const CreateProduct = () => {
     <>
     <div className="bg-[#FFFFFF] p-2 rounded-md overflow-hidden space-y-4">
       <h1 className="text-[#4741E1] font-semibold">
-        {productId ? "Edit Product" : "Add New Product"}
+        {true ? "Edit Product" : "Add New Product"}
       </h1>
       <Form {...form}>
         <form
@@ -821,7 +827,7 @@ const CreateProduct = () => {
             {(createLoading || updateLoading) && (
               <Loader className="mr-2 h-4 w-4 animate-spin" />
             )}
-            {productId ? "Update" : "Add"}
+            {true ? "Update" : "Add"}
           </Button>
 
           </div>

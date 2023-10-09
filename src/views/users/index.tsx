@@ -42,7 +42,7 @@ const Users: FC = () => {
     buisnessId: session?.user?.business_id,
     perPage: -1,
   });
-
+  // console.log("buisnessId");
   const [open, setOpen] = useState<boolean>(false);
   const [openDelete, setOpenDelete] = useState<boolean>(false);
 

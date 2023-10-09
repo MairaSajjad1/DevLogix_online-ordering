@@ -13,8 +13,6 @@ const userService = createApi({
       return headers;
     },
   }),
-  // refetchOnMountOrArgChange: true,
-
   endpoints: (builder) => ({
     createUser: builder.mutation({
       query: ({ data }) => ({
@@ -25,8 +23,8 @@ const userService = createApi({
       invalidatesTags: ["user"],
     }),
     getUsers: builder.query({
-      query: ({ businessId, perPage }) => ({
-        url: `/customers?business_id=${businessId}&per_page=${perPage}`,
+      query: ({ businessId}) => ({
+        url: `/customers?business_id=${businessId}`,
         method: "GET",
       }),
       transformResponse: ({ data }: { data: User[] }) =>

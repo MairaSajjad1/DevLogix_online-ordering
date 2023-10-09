@@ -223,7 +223,7 @@ const ProductsList: FC = () => {
         cell: ({ row }) => (
           <DataTableRowActions
             deleteAction={handleDelete}
-            editAction={() => handleEdit(row.original?.id || null)} 
+            editAction={handleEdit} 
             row={row}
           />
         ),
@@ -271,9 +271,9 @@ const ProductsList: FC = () => {
   //   }
   // };
 
-  const handleEdit = (productId: number | null) => {
-    if (productId !== null) {
-      router.push(`/products/products-list/${productId}/edit`);
+  const handleEdit = (product: Product|null) => {
+    if(product){
+      router.push(`/products/products-list/create?id=${product.id}`)
     }
   };
 
