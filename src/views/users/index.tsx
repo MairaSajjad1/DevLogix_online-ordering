@@ -39,7 +39,7 @@ const Users: FC = () => {
     isLoading: userLoading,
     isFetching: userFetching,
   } = useGetUsersQuery({
-    buisnessId: session?.user?.business_id,
+    businessId: session?.user?.business_id,
     perPage: -1,
   });
   // console.log("buisnessId");
