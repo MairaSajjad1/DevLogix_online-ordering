@@ -12,10 +12,12 @@ import { BiLoaderAlt as Loader } from "react-icons/bi";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useFieldArray, useForm } from "react-hook-form";
 import { useSession } from "next-auth/react";
+import { useRouter } from 'next/navigation';
 import { Input } from "@/components/ui/input";
 import { useGetUnitsQuery } from "@/store/services/unitService";
 import { useGetTaxratesQuery } from "@/store/services/taxrateService";
 import { useGetLocationsQuery } from "@/store/services/locationService";
+import { useGetSpecificProductsQuery } from "@/store/services/productService";
 import {
   Select,
   SelectContent,
@@ -30,11 +32,9 @@ import { Location } from "@/views/locations";
 import FileInput from "@/components/ui/file-input";
 import { Button } from "@/components/ui/button";
 import { useCreateProductMutation } from "@/store/services/productService";
-import { useUpdateProductMutation } from "@/store/services/productService";
 import { Checkbox } from "@/components/ui/checkbox";
 import toast from "react-hot-toast";
 import { useEffect, useMemo } from "react";
-import { useRouter } from "next/navigation";
 import { useGetCategoriesQuery } from "@/store/services/categoryService";
 import { Category } from "@/views/categories";
 import { useGetVariationsQuery } from "@/store/services/variationService";
@@ -44,6 +44,7 @@ import { Taxrate } from "@/views/taxrates";
 import { useGetBrandsQuery } from "@/store/services/brandService";
 import { Brand } from "@/views/brands";
 import { useGetBarcodesQuery } from "@/store/services/barCodeService";
+import { useUpdateProductMutation } from "@/store/services/productService";
 import { Barcode } from "@/views/bar-codes";
 
 
@@ -98,6 +99,18 @@ const CreateProduct = () => {
   const { data: session } = useSession();
 
   const router = useRouter();
+  const { query } = router;
+  const productId = query.id;
+  console.log(productId);
+
+  useEffect(() => {
+    // Extract the product ID from router.query
+    if (productId) {
+      console.log("Product ID:", productId);
+      // Fetch the product data for editing here if needed
+    }
+  }, [productId]);
+  
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -230,7 +243,9 @@ const CreateProduct = () => {
     }
   }, [updateError, updateSuccess]);
 
+
   function onSubmit(values: z.infer<typeof formSchema>) {
+    const isEditing = productId !== undefined;
     const formdata = new FormData();
     formdata.append("name", values.name);
     formdata.append("description", values.description);
@@ -311,7 +326,13 @@ const CreateProduct = () => {
       );
     }
     formdata.append("category_id", values.category_id);
-    create({ data: formdata });
+    // create({ data: formdata });
+
+    if (isEditing) {
+      update({ id: productId, data: formdata });
+    } else {
+      create({ data: formdata });
+    }
   }
 
   const handleFileSelect = (files: File[]) => {
@@ -322,8 +343,11 @@ const CreateProduct = () => {
 
   const loadingData = Array.from({ length: 10 }, (_, index) => index + 1);
   return (
+    <>
     <div className="bg-[#FFFFFF] p-2 rounded-md overflow-hidden space-y-4">
-      <h1 className="text-[#4741E1] font-semibold">Add New Product</h1>
+      <h1 className="text-[#4741E1] font-semibold">
+        {productId ? "Edit Product" : "Add New Product"}
+      </h1>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -789,21 +813,23 @@ const CreateProduct = () => {
           )}
 
           <div className="col-span-3 flex items-center justify-center">
-            <Button
-                disabled={createLoading || updateLoading}
-                className="w-full"
-                type="submit"
-              >
-                {(createLoading || updateLoading) && (
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                )}
-                Add
-                </Button>
+          <Button
+            disabled={createLoading || updateLoading}
+            className="w-full"
+            type="submit"
+          >
+            {(createLoading || updateLoading) && (
+              <Loader className="mr-2 h-4 w-4 animate-spin" />
+            )}
+            {productId ? "Update" : "Add"}
+          </Button>
 
           </div>
         </form>
         </Form>
     </div>
+  
+    </>
   );
 };
 

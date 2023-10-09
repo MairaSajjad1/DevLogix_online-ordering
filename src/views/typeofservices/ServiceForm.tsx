@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { BiLoaderAlt as Loader } from "react-icons/bi";
 import { Textarea } from "@/components/ui/textarea";
 import toast from "react-hot-toast";
+import { useUpdateUsersMutation } from "@/store/services/userService";
 import { TypeOfService } from "./index";
 import {
   useCreateTypeOfServiceMutation,
