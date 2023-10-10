@@ -1,7 +1,7 @@
-import Create from "@/views/buisnesses/create";
+// import Create from "@/views/buisnesses/create";
 
-const page = () => {
-  return <Create />;
-};
+// const page = () => {
+//   return <Create />;
+// };
 
-export default page;
+// export default page;
